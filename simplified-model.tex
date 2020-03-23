@@ -28,12 +28,6 @@
 % Define small caps acronyms?
 \def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
 \tsc{AMOC}
-\tsc{WGM}
-\tsc{QE}
-\tsc{EP}
-\tsc{PMS}
-\tsc{BEC}
-\tsc{DE}
 %%%
 
 \begin{document}
@@ -61,7 +55,7 @@
 \ead{emma.worthington@soton.ac.uk}
 %\ead[url]{www.cvr.cc, cvr@sayahna.org}
 
-\credit{Conceptualization of this study, Methodology, Software}
+%\credit{Conceptualization of this study, Methodology, Software}
 
 \author[2]{G.D.McCarthy}[]
 
@@ -77,7 +71,7 @@
    role=Supervisor,
    ]
 
-\credit{Data curation, Writing - Original draft preparation}
+%\credit{Data curation, Writing - Original draft preparation}
 
 \address[1]{University of Southampton, European Way, Southampton, SO14 3ZH, UK}
 \address[2]{ICARUS, Maynooth University, Maynooth, Co. Kildare, Ireland}
@@ -159,15 +153,31 @@ The historical hydrographic data came from multiple sources: the Western Boundar
 
 \section{Results}
 
+Initially applying the model to density anomaly data derived from transatlantic hydrographic sections shows the estimated AMOC transport anomalies to be generally larger than those estimated by \citet{bryden2005} (\autoref{fig:occ_pred}). The statistical model and Bry05 estimates are within the approximately 2 Sv uncertainty with the exception of the 1992 results. The estimates post-2004 also agree very well with the RAPID AMOC transport anomaly, capturing the large downturn in 2009-2010.
+
 \begin{figure}
 	\centering
-		\includegraphics[width=\linewidth]{../phd-code/hydrographic_prediction/figures/occupation_prediction_1980_2017.png}
-	\caption{The evanescent light - $1S$ quadrupole coupling
-	($g_{1,l}$) scaled to the bulk exciton-photon coupling
-	($g_{1,2}$). The size parameter $kr_{0}$ is denoted as $x$ and
-	the \PMS is placed directly on the cuprous oxide sample ($\delta
-	r=0$, See also Table \protect\ref{tbl1}).}
-	\label{FIG:1}
+		\includegraphics[width=\linewidth]{../phd-code/hydrographic_prediction/figures/occupation_moc_prediction_1980_2017.png}
+	\caption{AMOC transport anomaly estimated from the statistical model using density anomalies from transatlantic hydrographic sections, compared to estimates from \citet{bryden2005} and RAPID. The uncertainties shown for the model-derived values are the model's prediction intervals; the B05 uncertainty is 2 Sv.}
+	\label{fig:occ_pred}
+\end{figure}
+
+Applying the same model to density anomaly data derived from the EN4 underlying profiles shows 
+
+
+\begin{figure}
+	\centering
+		\includegraphics[width=\linewidth]{../phd-code/hydrographic_prediction/figures/en4_prediction_moc.png}
+	\caption{AMOC transport anomaly estimated from the statistical model using density anomalies from EN4 underlying profiles, compared to estimates from the transatlantic hydrographic sections (see \autoref{fig:occ_pred}) and RAPID}
+	\label{fig:en4_pred}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+		\includegraphics[width=\linewidth]{../phd-code/hydrographic_prediction/figures/wod_prediction_moc.png}
+	\caption{AMOC transport anomaly estimated from the statistical model using density anomalies derived from World Ocean Database data, compared to estimates from the transatlantic hydrographic sections (see \autoref{fig:occ_pred}) and RAPID}
+	\label{fig:wod_pred}
 \end{figure}
 
 -- transatlantic section data
